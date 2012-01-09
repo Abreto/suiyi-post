@@ -2,6 +2,7 @@
 #include <QtCore/QCoreApplication>
 #include <QTextStream>
 #include <QTextCodec>
+#include "global.h"
 #include "poster.h"
 
 
@@ -20,12 +21,13 @@ int main(int argc, char *argv[])
 
     // 字符集
     QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
 
 
     /** 如果少于三个参数(即没带任何参数或参数不够) */
     if( (QString(argv[1]) != "-h" && QString(argv[1]) != "--help") && argc < 3 )
     {
-        cout<<"用法: suiyi-post-cmd <URL> <需POST的内容>"<<endl<<endl;
+        cout<<QString("用法: suiyi-post-cmd <URL> <需POST的内容>")<<endl<<endl;
         return 0;
     }
 
@@ -33,7 +35,7 @@ int main(int argc, char *argv[])
     if ( QString(argv[1]) == "-h" || QString(argv[1]) == "--help" )
     {
         // 输出帮助信息
-        cout<<"用法: suiyi-post-cmd <URL> <要POST的内容>"<<endl;
+        cout<<QString("用法: suiyi-post-cmd <URL> <要POST的内容>")<<endl;
         return 0;
     }
 
