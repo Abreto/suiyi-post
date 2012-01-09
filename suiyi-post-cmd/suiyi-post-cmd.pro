@@ -20,6 +20,8 @@ SOURCES += main.cpp \
     poster.cpp
 
 HEADERS += \
-    poster.h
+    poster.h \
+    global.h
+
 
 

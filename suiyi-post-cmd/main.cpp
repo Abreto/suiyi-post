@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     {
         // 输出帮助信息
         cout<<"用法: suiyi-post-cmd <URL> <要POST的内容>"<<endl;
-        cout<<endl;
+        return 0;
     }
 
     url = new QUrl( QString(argv[1]) );
