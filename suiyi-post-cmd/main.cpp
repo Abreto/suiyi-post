@@ -18,11 +18,9 @@ int main(int argc, char *argv[])
     QUrl *url = NULL;
     QByteArray *contents = NULL;
 
-
     // 字符集
     QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf8"));
-
 
     /** 如果少于三个参数(即没带任何参数或参数不够) */
     if( (QString(argv[1]) != "-h" && QString(argv[1]) != "--help") && argc < 3 )
