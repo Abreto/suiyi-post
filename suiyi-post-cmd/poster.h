@@ -20,9 +20,7 @@ public:
     Poster(QUrl URL, QByteArray content_to_post);
 
     void post();
-
-
-
+    
 };
 
 #endif // POSTER_H
