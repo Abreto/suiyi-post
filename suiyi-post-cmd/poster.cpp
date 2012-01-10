@@ -4,8 +4,8 @@
 #include <QTextCodec>
 #include "poster.h"
 
-
 extern QTextStream cout;
+
 
 void Poster::readyread()
 {
@@ -13,13 +13,11 @@ void Poster::readyread()
     exit(0);
 }
 
-
 Poster::Poster(QUrl URL, QByteArray content_to_post)
 {
     url = URL;
     content = content_to_post;
 }
-
 
 void Poster::post()
 {
